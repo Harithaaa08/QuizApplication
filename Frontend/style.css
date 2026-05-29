@@ -25,14 +25,14 @@ body {
   padding: 10px;
   margin: 10px 0;
   border: none;
-  background: #007bff;
+  background: #131313;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .btn:hover {
-  background: #0056b3;
+  background: #505051;
 }
 
 #next-btn {

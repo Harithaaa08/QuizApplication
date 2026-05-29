@@ -1,34 +1,28 @@
-const questions = [
-  {
-    question: "What does HTML stand for?",
-    answers: [
-      { text: "Hyper Text Markup Language", correct: true },
-      { text: "Home Tool Markup Language", correct: false },
-      { text: "Hyperlinks and Text Markup Language", correct: false },
-      { text: "HighText Machine Language", correct: false },
-    ],
-  },
+let questions = [];
 
-  {
-    question: "Which language is used for styling web pages?",
-    answers: [
-      { text: "HTML", correct: false },
-      { text: "JQuery", correct: false },
-      { text: "CSS", correct: true },
-      { text: "XML", correct: false },
-    ],
-  },
+function shuffleArray(array) {
+  let arr = [...array]; // avoid modifying original
 
-  {
-    question: "Which is a JavaScript framework?",
-    answers: [
-      { text: "React", correct: true },
-      { text: "Django", correct: false },
-      { text: "Laravel", correct: false },
-      { text: "Flask", correct: false },
-    ],
-  },
-];
+  for (let i = arr.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr;
+}
+
+async function loadQuestions() {
+  try {
+    const response = await fetch("questions.json");
+
+    allQuestions = await response.json();
+
+    startQuiz();
+  } catch (error) {
+    console.log("Error Loading Questionns:", error);
+  }
+}
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -41,7 +35,22 @@ let score = 0;
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
+
+  scoreElement.innerHTML = "";
+
   nextButton.innerHTML = "Next";
+  nextButton.onclick = null;
+
+  //shuffle everytime the quiz starts
+  let data = shuffleArray([...allQuestions]);
+  questions = data.slice(0, 5);
+
+  //shuffle options
+
+  questions.forEach((question) => {
+    question.answers = shuffleArray([...question.answers]);
+  });
+
   showQuestion();
 }
 
@@ -71,6 +80,8 @@ function showQuestion() {
 
 function resetState() {
   nextButton.style.display = "none";
+
+  scoreElement.innerHTML = "";
 
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
@@ -124,4 +135,4 @@ function showScore() {
   nextButton.onclick = startQuiz;
 }
 
-startQuiz();
+loadQuestions();

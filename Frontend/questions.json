@@ -1,0 +1,182 @@
+[
+  {
+    "question": "What does HTML stand for?",
+    "answers": [
+      { "text": "Hyper Text Markup Language", "correct": true },
+      { "text": "High Transfer Machine Language", "correct": false },
+      { "text": "Hyperlink Text Management Language", "correct": false },
+      { "text": "Home Tool Markup Language", "correct": false }
+    ]
+  },
+  {
+    "question": "Which language is used for styling web pages?",
+    "answers": [
+      { "text": "CSS", "correct": true },
+      { "text": "Python", "correct": false },
+      { "text": "Java", "correct": false },
+      { "text": "C++", "correct": false }
+    ]
+  },
+  {
+    "question": "Which language is used for web development?",
+    "answers": [
+      { "text": "JavaScript", "correct": true },
+      { "text": "C", "correct": false },
+      { "text": "Assembly", "correct": false },
+      { "text": "Swift", "correct": false }
+    ]
+  },
+  {
+    "question": "Which company developed Java?",
+    "answers": [
+      { "text": "Sun Microsystems", "correct": true },
+      { "text": "Google", "correct": false },
+      { "text": "Microsoft", "correct": false },
+      { "text": "Apple", "correct": false }
+    ]
+  },
+  {
+    "question": "What does CSS stand for?",
+    "answers": [
+      { "text": "Cascading Style Sheets", "correct": true },
+      { "text": "Computer Style Sheets", "correct": false },
+      { "text": "Creative Style Syntax", "correct": false },
+      { "text": "Colorful Style System", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used for paragraphs?",
+    "answers": [
+      { "text": "<p>", "correct": true },
+      { "text": "<h1>", "correct": false },
+      { "text": "<div>", "correct": false },
+      { "text": "<span>", "correct": false }
+    ]
+  },
+  {
+    "question": "Which keyword is used to declare variables in JavaScript?",
+    "answers": [
+      { "text": "let", "correct": true },
+      { "text": "define", "correct": false },
+      { "text": "varName", "correct": false },
+      { "text": "new", "correct": false }
+    ]
+  },
+  {
+    "question": "Which symbol is used for comments in JavaScript?",
+    "answers": [
+      { "text": "//", "correct": true },
+      { "text": "#", "correct": false },
+      { "text": "<!-- -->", "correct": false },
+      { "text": "**", "correct": false }
+    ]
+  },
+  {
+    "question": "Which method converts JSON to JavaScript object?",
+    "answers": [
+      { "text": "JSON.parse()", "correct": true },
+      { "text": "JSON.stringify()", "correct": false },
+      { "text": "JSON.convert()", "correct": false },
+      { "text": "JSON.object()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which method is used to print output in JavaScript console?",
+    "answers": [
+      { "text": "console.log()", "correct": true },
+      { "text": "print()", "correct": false },
+      { "text": "echo()", "correct": false },
+      { "text": "write()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which operator is used for strict equality in JavaScript?",
+    "answers": [
+      { "text": "===", "correct": true },
+      { "text": "==", "correct": false },
+      { "text": "=", "correct": false },
+      { "text": "!=", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used for images?",
+    "answers": [
+      { "text": "<img>", "correct": true },
+      { "text": "<image>", "correct": false },
+      { "text": "<picture>", "correct": false },
+      { "text": "<src>", "correct": false }
+    ]
+  },
+  {
+    "question": "Which property changes text color in CSS?",
+    "answers": [
+      { "text": "color", "correct": true },
+      { "text": "font-color", "correct": false },
+      { "text": "text-color", "correct": false },
+      { "text": "background-color", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag creates a hyperlink?",
+    "answers": [
+      { "text": "<a>", "correct": true },
+      { "text": "<link>", "correct": false },
+      { "text": "<href>", "correct": false },
+      { "text": "<url>", "correct": false }
+    ]
+  },
+  {
+    "question": "Which function is used to delay execution in JavaScript?",
+    "answers": [
+      { "text": "setTimeout()", "correct": true },
+      { "text": "delay()", "correct": false },
+      { "text": "wait()", "correct": false },
+      { "text": "pause()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which CSS property controls element size?",
+    "answers": [
+      { "text": "width", "correct": true },
+      { "text": "font-size", "correct": false },
+      { "text": "display", "correct": false },
+      { "text": "position", "correct": false }
+    ]
+  },
+  {
+    "question": "Which array method adds an element at the end?",
+    "answers": [
+      { "text": "push()", "correct": true },
+      { "text": "pop()", "correct": false },
+      { "text": "shift()", "correct": false },
+      { "text": "slice()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which method removes the last array element?",
+    "answers": [
+      { "text": "pop()", "correct": true },
+      { "text": "push()", "correct": false },
+      { "text": "shift()", "correct": false },
+      { "text": "concat()", "correct": false }
+    ]
+  },
+  {
+    "question": "Which keyword creates a constant in JavaScript?",
+    "answers": [
+      { "text": "const", "correct": true },
+      { "text": "constant", "correct": false },
+      { "text": "fixed", "correct": false },
+      { "text": "static", "correct": false }
+    ]
+  },
+  {
+    "question": "Which company developed React?",
+    "answers": [
+      { "text": "Facebook", "correct": true },
+      { "text": "Google", "correct": false },
+      { "text": "Amazon", "correct": false },
+      { "text": "Netflix", "correct": false }
+    ]
+  }
+]
