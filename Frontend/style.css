@@ -1,43 +1,124 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial;
-  background: #f0f2f5;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea, #06b6d4);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
 }
 
+/* Background animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Quiz container */
 .quiz-container {
-  width: 400px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 420px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
+.quiz-container:hover {
+  transform: translateY(-3px);
+}
+
+/* Question */
 #question {
+  font-size: 20px;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
+/* Answer buttons */
 .btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 10px 0;
   border: none;
-  background: #131313;
-  color: white;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(10px);
 }
 
+/* Hover effect */
 .btn:hover {
-  background: #505051;
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.4);
 }
 
+/* Disabled state */
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Next button */
 #next-btn {
-  margin-top: 20px;
-  padding: 10px;
+  margin-top: 15px;
+  padding: 12px;
   width: 100%;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #22c55e;
+  color: white;
   display: none;
+  transition: 0.3s;
+}
+
+#next-btn:hover {
+  background: #16a34a;
+  transform: scale(1.02);
+}
+
+/* Score */
+#score {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Correct / Wrong (JS uses these colors) */
+.correct {
+  background: #22c55e !important;
+  color: white;
+}
+
+.wrong {
+  background: #ef4444 !important;
+  color: white;
 }
